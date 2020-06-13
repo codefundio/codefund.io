@@ -1,0 +1,12 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% capture page_title %}{{ page.title | strip_html | strip_newlines }}{% endcapture %}
+<title>{% if page_title != "" %}{{ page_title | escape }} | {{ site.metadata.title | escape }}{% else %}{{ site.metadata.title | escape }}: {{ site.metadata.tagline | escape }}{% endif %}</title>
+
+<meta name="description" content="{{ site.metadata.description }}" />
+
+<link rel="stylesheet" href="{% webpack_path css %}" />
+<script src="{% webpack_path js %}" defer></script>
+<script src="https://kit.fontawesome.com/0ba6fac129.js" crossorigin="anonymous" defer></script>
+<script src="https://config.metomic.io/config.js?id=prj:b675cf5e-9167-4694-8b45-7dcace0a0739" crossorigin charset="utf-8" defer></script>
+<script src="https://consent-manager.metomic.io/embed.js" crossorigin charset="utf-8" defer></script>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="{{ page.layout }} {{ page.page_class }} leading-normal tracking-normal text-white gradient">
+    {% include navbar.html %}
+    {{ content }}
+    {% include footer.html %}
+
+    {% if bridgetown.environment == 'production' %}
+      {% include analytics.html %}
+    {% endif %}
+  </body>
+</html>
