@@ -1,0 +1,6 @@
+[build]
+  command = "yarn deploy"
+  publish = "output"
+
+[build.environment]
+  BRIDGESTONE_ENV = "production"
